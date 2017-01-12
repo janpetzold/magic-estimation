@@ -1,0 +1,78 @@
+<label for="me-sprint-select">Choose sprint: </label>
+<select id="me-sprint-select" name="me-sprint-select" ng-model="ctrl.currentSprint" ng-change="ctrl.selectSprint(ctrl.currentSprint)">
+  <option ng-repeat="s in ctrl.sprints track by $index">{{s.name}}</option>
+</select>
+
+<label for="me-participant-add">Add participants: </label>
+<input id="me-participant-add" type="text" ng-model="ctrl.participant" />
+<button type="button" ng-click="ctrl.addParticipant(ctrl.participant)">Add</button>
+
+<div class="me-sum-sp">
+  <span>#SP: </span><span class="sum">{{ctrl.sum}}</span>
+</div>
+
+<br />
+
+<ul class="me-participants">
+    <li class="me-participant" ng-class="{'me-participant-selected': p === ctrl.selectedParticipant}" ng-repeat="p in ctrl.participants">
+        <span class="me-participant-text">{{p}}</span>
+        <button type="button" class="me-participant-remove" ng-click="ctrl.removeParticipant(p)">x</button>
+    </li>
+
+    <button type="button" class="me-select-estimator" ng-click="ctrl.selectParticipant()" ng-show="ctrl.participants.length > 0">Next</button>
+</ul>
+
+
+
+<div class="me-unestimated-stories" ng-show="ctrl.tasks.length > 0">
+  <div dragula='"bag-one"'>
+    <div class="me-story" ng-repeat="task in ctrl.tasks track by task.id" id="{{task.id}}">
+      <img ng-src="{{ctrl.getIconForTask(task.type)}}">
+      <a class="me-task-link" href="https://{{ctrl.host}}/browse/{{task.id}}" target="_blank">{{task.id}}</a>
+      <span>{{task.name}}</span>
+      <p>moved: {{task.touched}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" ng-show="ctrl.tasks.length > 0">
+  <!-- content area with stories/tasks -->
+  <div class="row me-board">
+    <div class="col-md-1">
+      <h2>1</h2>
+      <div class="container me-swimlane" data-sp="1" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>2</h2>
+      <div class="container me-swimlane" data-sp="2" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>3</h2>
+      <div class="container me-swimlane" data-sp="3" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>5</h2>
+      <div class="container me-swimlane" data-sp="5" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>8</h2>
+      <div class="container me-swimlane" data-sp="8" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>13</h2>
+      <div class="container me-swimlane" data-sp="13" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>20</h2>
+      <div class="container me-swimlane" data-sp="20" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>40</h2>
+      <div class="container me-swimlane" data-sp="40" dragula='"bag-one"'></div>
+    </div>
+    <div class="col-md-1">
+      <h2>?</h2>
+      <div class="container me-swimlane" data-sp="0" dragula='"bag-one"'></div>
+    </div>
+  </div>
+</div>

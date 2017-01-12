@@ -1,0 +1,193 @@
+/** Bootstrap overrides */
+.glyphicon-star-empty {
+    font-size: 23px;
+    font-weight: bold;
+    top: -2px;
+    margin: 0 2px 0 2px;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-1 {
+    padding: 0;
+    border-right: 1px solid #AAAAAA;
+    width: 11.1111%;
+    min-height: 60%;
+}
+
+.col-md-1:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+/** Fonts **/
+/* Main OpenSans font - we currently just use "Light" and "SemiBold" cuts but that might change */
+@font-face {
+    font-family: 'Fira Sans Light';
+    src: url('../fonts/FiraSans-Light.eot?') format('eot'),
+    url('../fonts/FiraSans-Light.woff2') format('woff2'),
+    url('../fonts/FiraSans-Light.woff') format('woff'),
+    url('../fonts/FiraSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans Semibold';
+    src: url('../fonts/FiraSans-SemiBold.eot?') format('eot'),
+    url('../fonts/FiraSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/FiraSans-SemiBold.woff') format('woff'),
+    url('../fonts/FiraSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/** ME-specific styles */
+body {
+    font-family: "Fira Sans Light";
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 7px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+ul {
+    padding: 0;
+}
+
+img {
+    vertical-align: text-top;
+}
+
+label, select {
+    font-size: 16px;
+}
+
+label {
+    margin: 0 0 12px 4px;
+}
+
+select {
+    font-size: 16px;
+    padding: 4px;
+    margin: 0 24px 0 7px;
+}
+
+.me-participants {
+    margin: 12px 0 12px 0;
+}
+
+.me-participant {
+    display: inline;
+    padding: 7px;
+    margin: 0 4px 0 4px;
+    background-color: #EEEEEE;
+}
+
+.me-participant-selected {
+    background-color: #108eec;
+    color: #f0ecf0;
+}
+
+.me-participant-text {
+    font-family: "Fira Sans Semibold";
+    font-size: 16px;
+}
+
+.me-participant-remove {
+    font-family: "Fira Sans Semibold";
+    color: #000000;
+    padding: 0 1px 0 1px;
+    font-size: 12px;
+    vertical-align: top;
+    line-height: 7px;
+    margin-right: -7px;
+}
+
+.me-sum-sp {
+    position: absolute;
+    display: inline-block;
+    margin-top: 3px;
+    right: 7px
+}
+
+.me-sum-sp span {
+    font-size: 20px;
+}
+
+.me-sum-sp .sum {
+    font-family: "Fira Sans Semibold";
+}
+
+.me-select-estimator {
+    display: inline;
+    margin-left: 7px;
+}
+
+.me-task-link {
+    color: #000000;
+    font-family: "Fira Sans Light";
+}
+
+.me-unestimated-stories {
+    float: left;
+    border: 3px dashed #A7A7AA;
+    min-width: 100%;
+    min-height: 75px;
+    background-color: #EEEEEE;
+    padding: 7px;
+    margin: 7px 0 7px 0;
+}
+
+.me-unestimated-stories:after {
+    clear: both;
+}
+
+.me-unestimated-stories .me-story {
+    float: left;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+
+.me-board {
+    clear: both;
+    border: 1px solid #AAAAAA;
+}
+
+.me-swimlane {
+    width: 100%;
+    min-height: 500px;
+}
+
+.me-story {
+    font-size: 15px;
+    margin: 0 0 4px 0;
+    padding: 7px;
+    background-color: rgba(0, 217, 255, 0.76);
+    border: 1px solid #105cb6;
+    cursor: pointer;
+}
+
+.me-story span {
+    font-family: "Fira Sans Semibold";
+}
+
+.me-story p {
+    margin: 0;
+    font-size: 12px;
+    font-family: "Fira Sans Light";
+    text-align: right;
+}
+
+
+

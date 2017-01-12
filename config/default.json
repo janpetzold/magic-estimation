@@ -1,0 +1,9 @@
+{
+  "jira": {
+    "host": "HOST",
+    "project": "PROJECT",
+    "username": "USER",
+    "password": "PASSWORD",
+    "board": 1234
+  }
+}
