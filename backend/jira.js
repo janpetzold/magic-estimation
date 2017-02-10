@@ -44,12 +44,14 @@ var getIssues = function(sprints, resolve) {
 
     for(var i = 0; i < sprints.length; i++) {
         request({
-            url: 'https://' +  config.get('jira.username') + ':' +  config.get('jira.password') + '@' + config.get('jira.host') + '/rest/api/latest/search?jql=project=' + config.get('jira.project') + '  AND Sprint=' + sprints[i].id
+            url: 'https://' +  config.get('jira.username') + ':' +  config.get('jira.password') + '@' + config.get('jira.host') + '/rest/api/latest/search?jql=Sprint=' + sprints[i].id
         }, function(error, response, body) {
             sprintResolvedCounter++;
 
             var allIssuesForSprint = JSON.parse(body);
             var currentSprintId = this.path.split('Sprint=')[1];
+
+            console.log("Found " + allIssuesForSprint.length + " issues for sprint " + currentSprintId);
 
             for(var i = 0; i < sprints.length; i++) {
                 if(sprints[i].id === parseInt(currentSprintId, 10)) {

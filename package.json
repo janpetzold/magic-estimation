@@ -9,12 +9,12 @@
   "author": "Jan Petzold",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-dragula": "^1.2.7",
-    "bootstrap": "^3.3.7",
-    "config": "^1.21.0",
-    "express": "^4.14.0",
-    "jquery": "^3.1.0",
-    "request": "^2.72.0"
+    "angular": "1.5.8",
+    "angular-dragula": "1.2.7",
+    "bootstrap": "3.3.7",
+    "config": "1.21.0",
+    "express": "4.14.0",
+    "jquery": "3.1.0",
+    "request": "2.72.0"
   }
 }
